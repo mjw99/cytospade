@@ -40,20 +40,17 @@ public class MergeOrderOperations {
         //Cluster 0 does not exist
         clusterIdentifier.add(null);
 
-        // Skip the header
-        myfile.nextLine();
-
         // iterate over rows in the file
-        int lineNum = 2;
+        int lineNum = 1;
         while (myfile.hasNextLine()) {
-            String[] nodeIds = myfile.nextLine().split(" ");
-            if (nodeIds.length != 3) {
+            String[] nodeIds = myfile.nextLine().split("\\s+");
+            if (nodeIds.length != 2) {
                 throw new Exception("Merge order file is corrupted. Line number:" + lineNum + " in file:" + mergeOrderFile.getName());
             }
             lineNum++;
 
-            int element0 = Integer.decode(nodeIds[1]);
-            int element1 = Integer.decode(nodeIds[2]);
+            int element0 = Integer.decode(nodeIds[0]);
+            int element1 = Integer.decode(nodeIds[1]);
 
             //Nesting type 1
             ArrayList<Integer> cluster = new ArrayList<Integer>();
