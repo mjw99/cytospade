@@ -1,10 +1,10 @@
-package cytospade;
+package name.mjw.cytospade;
 
 import cytoscape.plugin.CytoscapePlugin;
 import cytoscape.util.CytoscapeAction;
 import cytoscape.view.cytopanels.CytoPanelImp;
 import cytoscape.*;
-import cytospade.ui.SpadeAnalysisPanel;
+import name.mjw.cytospade.ui.SpadeAnalysisPanel;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 

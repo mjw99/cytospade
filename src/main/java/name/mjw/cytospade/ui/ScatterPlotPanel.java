@@ -9,14 +9,14 @@
  * Created on Sep 23, 2011, 11:20:39 AM
  */
 
-package cytospade.ui;
+package name.mjw.cytospade.ui;
 
 import cytoscape.logger.CyLogger;
-import cytospade.FCSOperations;
-import cytospade.SpadeContext;
-import facs.CanvasSettings;
-import facs.Illustration;
-import facs.Plot2D;
+import name.mjw.cytospade.FCSOperations;
+import name.mjw.cytospade.SpadeContext;
+import name.mjw.facs.CanvasSettings;
+import name.mjw.facs.Illustration;
+import name.mjw.facs.Plot2D;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
@@ -127,7 +127,7 @@ public class ScatterPlotPanel extends javax.swing.JPanel {
                 } else {
                     // Very small numbers of events make contours meaningless
                     // so we automatically switch to dot plots in this scenario
-                    plot_type = facs.Illustration.DOT_PLOT;
+                    plot_type = name.mjw.facs.Illustration.DOT_PLOT;
                     dot_size = 3;
                 }
 
@@ -135,7 +135,7 @@ public class ScatterPlotPanel extends javax.swing.JPanel {
                         1, // Horizontal spacing between plots
                         1, // Vertical spacing between plots
                         0, 1, 2,
-                        plot_type, facs.Illustration.DEFAULT_COLOR_SET,
+                        plot_type, name.mjw.facs.Illustration.DEFAULT_COLOR_SET,
                         false, // Black background
                         true,  // Draw annotations
                         true,  // Draw scale labels
@@ -145,10 +145,10 @@ public class ScatterPlotPanel extends javax.swing.JPanel {
                         300, 1.0d, 1.0d,
                         10.0d, // Note this choices interact with small event check above
                         10.0d,
-                        facs.Illustration.DEFAULT_POPULATION_TYPE, event_count, dot_size);
+                        name.mjw.facs.Illustration.DEFAULT_POPULATION_TYPE, event_count, dot_size);
                 BufferedImage image;
                 try {
-                    image = facs.Plot2D.drawPlot(
+                    image = name.mjw.facs.Plot2D.drawPlot(
                             cs,
                             fcsOps.getSelectedNodesCount() == 0 ? fcsOps.getEvents(xAxisParam) : fcsOps.getSelectedEvents(xAxisParam),
                             fcsOps.getSelectedNodesCount() == 0 ? fcsOps.getEvents(yAxisParam) : fcsOps.getSelectedEvents(yAxisParam),
@@ -178,19 +178,19 @@ public class ScatterPlotPanel extends javax.swing.JPanel {
 
     private int getPlotType(String type) {
         if (type.matches("Shaded Contour")) {
-            return facs.Illustration.SHADED_CONTOUR_PLOT;
+            return name.mjw.facs.Illustration.SHADED_CONTOUR_PLOT;
         } else if (type.matches("Dot")) {
-            return facs.Illustration.DOT_PLOT;
+            return name.mjw.facs.Illustration.DOT_PLOT;
         } else if (type.matches("Density Dot")) {
-            return facs.Illustration.DENSITY_DOT_PLOT;
+            return name.mjw.facs.Illustration.DENSITY_DOT_PLOT;
         } else if (type.matches("Shadow")) {
-            return facs.Illustration.SHADOW_PLOT;
+            return name.mjw.facs.Illustration.SHADOW_PLOT;
         } else if (type.matches("Contour")) {
-            return facs.Illustration.CONTOUR_PLOT;
+            return name.mjw.facs.Illustration.CONTOUR_PLOT;
         } else if (type.matches("Density")) {
-            return facs.Illustration.DENSITY_PLOT;
+            return name.mjw.facs.Illustration.DENSITY_PLOT;
         } else {
-            return facs.Illustration.DOT_PLOT;
+            return name.mjw.facs.Illustration.DOT_PLOT;
         }
     }
 

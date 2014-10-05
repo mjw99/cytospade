@@ -1,4 +1,4 @@
-package cytospade.ui;
+package name.mjw.cytospade.ui;
 
 import cytoscape.CyEdge;
 import cytoscape.CyNetwork;

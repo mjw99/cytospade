@@ -26,7 +26,7 @@
  *
  * http://www.cytobank.org
  */
-package facs;
+package name.mjw.facs;
 
 // Import the prefuse data package
 import java.io.IOException;
@@ -38,7 +38,7 @@ import java.io.IOException;
 //import facs.membership.*;
 
 // Import the scale package
-import facs.scale.*;
+import name.mjw.facs.scale.*;
 
 /**
  * <p>

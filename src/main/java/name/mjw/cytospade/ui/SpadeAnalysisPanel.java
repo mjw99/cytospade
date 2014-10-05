@@ -3,7 +3,7 @@
  *
  * Created on Dec 5, 2011, 9:24:43 PM
  */
-package cytospade.ui;
+package name.mjw.cytospade.ui;
 
 import cytoscape.CyNetwork;
 import cytoscape.CyNode;
@@ -18,15 +18,15 @@ import cytoscape.visual.VisualMappingManager;
 import cytoscape.visual.VisualPropertyDependency;
 import cytoscape.visual.VisualPropertyType;
 import cytoscape.visual.VisualStyle;
-import cytospade.CytoSpade;
-import cytospade.FCSOperations;
-import cytospade.MergeOrderOperations;
-import cytospade.SpadeContext;
-import cytospade.SpadeContext.NormalizationKind;
-import cytospade.SpadeController;
-import cytospade.VisualMapping;
-import cytospade.WorkflowWizard;
-import cytospade.WorkflowWizardPanels;
+import name.mjw.cytospade.CytoSpade;
+import name.mjw.cytospade.FCSOperations;
+import name.mjw.cytospade.MergeOrderOperations;
+import name.mjw.cytospade.SpadeContext;
+import name.mjw.cytospade.SpadeContext.NormalizationKind;
+import name.mjw.cytospade.SpadeController;
+import name.mjw.cytospade.VisualMapping;
+import name.mjw.cytospade.WorkflowWizard;
+import name.mjw.cytospade.WorkflowWizardPanels;
 import giny.model.GraphPerspective;
 import giny.view.NodeView;
 import java.awt.Color;

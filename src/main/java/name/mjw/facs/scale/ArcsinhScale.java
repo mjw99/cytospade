@@ -26,7 +26,7 @@
 *
 * http://www.cytobank.org
 */
-package facs.scale;
+package name.mjw.facs.scale;
 
 /**
 * <p>

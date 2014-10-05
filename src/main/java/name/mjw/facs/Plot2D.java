@@ -22,7 +22,7 @@
 *
 * http://www.cytobank.org
 */
-package facs;
+package name.mjw.facs;
 
 import java.io.*;
 import java.awt.*;
@@ -30,7 +30,7 @@ import java.awt.image.*;
 import javax.imageio.*;
 import java.awt.geom.Point2D;
 
-import facs.scale.*;
+import name.mjw.facs.scale.*;
 
 /**
 * <p>
@@ -238,7 +238,7 @@ public final class Plot2D {
 
                 int[][] bins = null;
                 // get the array of bin values
-                bins = facs.PopulationL.getBinValues(xScale, yScale, xScaleArgument, yScaleArgument, cs.getNumXBins(), cs.getNumYBins(), xMin, xMax, yMin, yMax, xChanEvents, yChanEvents);
+                bins = name.mjw.facs.PopulationL.getBinValues(xScale, yScale, xScaleArgument, yScaleArgument, cs.getNumXBins(), cs.getNumYBins(), xMin, xMax, yMin, yMax, xChanEvents, yChanEvents);
 
                 // Draw the plot
                 
@@ -247,10 +247,10 @@ public final class Plot2D {
 
                 // If there are background events to show, draw them as gray dots
                 if (xChanAllEvents != null) {
-                    int[][] bkgbins = facs.PopulationL.getBinValues(xScale, yScale, xScaleArgument, yScaleArgument, cs.getNumXBins(), cs.getNumYBins(), xMin, xMax, yMin, yMax, xChanAllEvents, yChanAllEvents);
+                    int[][] bkgbins = name.mjw.facs.PopulationL.getBinValues(xScale, yScale, xScaleArgument, yScaleArgument, cs.getNumXBins(), cs.getNumYBins(), xMin, xMax, yMin, yMax, xChanAllEvents, yChanAllEvents);
                     //drawDots(bkgbins, g, Color.LIGHT_GRAY, cs.getPlotHeight());
-                    double[][] bkgDensityValues = facs.PopulationL.getTriweightKernelDensityValues(bkgbins, cs.getSmoothing() * 2.5d);
-                    double[][] bkgSortedDensityValues = facs.PopulationL.sortDensityValues(bkgDensityValues);
+                    double[][] bkgDensityValues = name.mjw.facs.PopulationL.getTriweightKernelDensityValues(bkgbins, cs.getSmoothing() * 2.5d);
+                    double[][] bkgSortedDensityValues = name.mjw.facs.PopulationL.sortDensityValues(bkgDensityValues);
                     drawBkgContours(bkgbins, xChanAllEvents.length, bkgDensityValues, bkgSortedDensityValues, g, cs);
                 }
 
@@ -261,24 +261,24 @@ public final class Plot2D {
                 } else if (plotType == Representation.DENSITY_DOT_PLOT) {
                     // If the type of the plot is a density dot plot, then draw
                     // a density dot plot.
-                    double[][] sortedBinValues = facs.PopulationL.sortBinValues(bins);
+                    double[][] sortedBinValues = name.mjw.facs.PopulationL.sortBinValues(bins);
                     drawDensityDots(bins, eventCount, sortedBinValues, g, cs);
                 } else if (plotType == Representation.SHADOW_PLOT) {
                     // If the type of the plot is a shadow plot, then draw a
                     // shadow plot.
-                    double[][] densityValues = facs.PopulationL.getTriweightKernelDensityValues(bins, cs.getSmoothing() * 2.5d);
-                    double[][] sortedDensityValues =  facs.PopulationL.sortDensityValues(densityValues);
+                    double[][] densityValues = name.mjw.facs.PopulationL.getTriweightKernelDensityValues(bins, cs.getSmoothing() * 2.5d);
+                    double[][] sortedDensityValues =  name.mjw.facs.PopulationL.sortDensityValues(densityValues);
                     drawDensityDots(bins, eventCount, sortedDensityValues, g, cs);
                 } else if (plotType == Representation.DENSITY_PLOT) {
                     // If the type of the plot is a density plot, then draw a
                     // density plot.
-                    double[][] densityValues = facs.PopulationL.getTriweightKernelDensityValues(bins, cs.getSmoothing() * 0.5d);
-                    double[][] sortedDensityValues = facs.PopulationL.sortDensityValues(densityValues);
+                    double[][] densityValues = name.mjw.facs.PopulationL.getTriweightKernelDensityValues(bins, cs.getSmoothing() * 0.5d);
+                    double[][] sortedDensityValues = name.mjw.facs.PopulationL.sortDensityValues(densityValues);
                     drawDensityDots(bins, eventCount, sortedDensityValues, g, cs);
                 } else {
                     // Otherwise, draw a contour plot, shaded or not.
-                    double[][] densityValues = facs.PopulationL.getTriweightKernelDensityValues(bins, cs.getSmoothing() * 2.5d);
-                    double[][] sortedDensityValues = facs.PopulationL.sortDensityValues(densityValues);
+                    double[][] densityValues = name.mjw.facs.PopulationL.getTriweightKernelDensityValues(bins, cs.getSmoothing() * 2.5d);
+                    double[][] sortedDensityValues = name.mjw.facs.PopulationL.sortDensityValues(densityValues);
                     drawContours(bins, eventCount, densityValues, sortedDensityValues, g, cs, (plotType == Representation.SHADED_CONTOUR_PLOT));
                 }
 

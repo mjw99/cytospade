@@ -27,7 +27,7 @@
 *
 * http://www.cytobank.org
 */
-package facs;
+package name.mjw.facs;
 
 // Import the utility package
 import java.io.IOException;

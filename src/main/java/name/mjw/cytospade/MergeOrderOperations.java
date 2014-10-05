@@ -1,11 +1,11 @@
-package cytospade;
+package name.mjw.cytospade;
 
 import cytoscape.CyNetwork;
 import cytoscape.CyNode;
 import cytoscape.Cytoscape;
 import cytoscape.view.CyNetworkView;
 import cytoscape.visual.VisualStyle;
-import cytospade.ui.NodeContextMenuItems;
+import name.mjw.cytospade.ui.NodeContextMenuItems;
 import giny.model.Node;
 import java.io.File;
 import java.io.FileNotFoundException;

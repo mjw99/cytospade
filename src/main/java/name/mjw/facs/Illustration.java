@@ -33,7 +33,7 @@
  * http://www.cytobank.org
  */
 
-package facs;
+package name.mjw.facs;
 
 // Import the utility package
 import java.util.*;
@@ -54,7 +54,7 @@ import java.io.Serializable;
 //import facs.membership.*;
 
 // Import the scaling package
-import facs.scale.*;
+import name.mjw.facs.scale.*;
 
 // Import the io package exceptions
 

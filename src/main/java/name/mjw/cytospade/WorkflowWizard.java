@@ -1,4 +1,4 @@
-package cytospade;
+package name.mjw.cytospade;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.util.HashMap;

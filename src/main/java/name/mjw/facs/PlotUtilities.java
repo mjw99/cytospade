@@ -26,7 +26,7 @@
 *
 * http://www.cytobank.org
 */
-package facs;
+package name.mjw.facs;
 
 // Import the Abstract Window Toolkit package for drawing
 import java.awt.*;
@@ -38,7 +38,7 @@ import java.io.IOException;
 import java.util.*;
 
 // Import the scale package
-import facs.scale.*;
+import name.mjw.facs.scale.*;
 
 
 /**

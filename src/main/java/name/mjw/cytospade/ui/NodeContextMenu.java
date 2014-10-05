@@ -3,10 +3,10 @@
  * and open the template in the editor.
  */
 
-package cytospade.ui;
+package name.mjw.cytospade.ui;
 
-import cytospade.ui.NodeContextMenuItems.MakeNestedNetwork;
-import cytospade.ui.NodeContextMenuItems.UndoNestedNetwork;
+import name.mjw.cytospade.ui.NodeContextMenuItems.MakeNestedNetwork;
+import name.mjw.cytospade.ui.NodeContextMenuItems.UndoNestedNetwork;
 import ding.view.NodeContextMenuListener;
 import giny.view.NodeView;
 import javax.swing.JMenu;

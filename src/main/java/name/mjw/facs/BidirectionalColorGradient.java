@@ -26,7 +26,7 @@
 *
 * http://www.cytobank.org
 */
-package facs;
+package name.mjw.facs;
 
 // Import the Color class
 import java.awt.Color;

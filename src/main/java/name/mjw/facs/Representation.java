@@ -26,7 +26,7 @@
  *
  * http://www.cytobank.org
  */
-package facs;
+package name.mjw.facs;
 
 // TODO This needs to be cleaned up since there are
 // TODO deferences between this version and the version (formerly) found in smallComp.

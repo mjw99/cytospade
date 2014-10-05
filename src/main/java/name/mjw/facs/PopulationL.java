@@ -1,7 +1,7 @@
-package facs;
+package name.mjw.facs;
 
-import facs.scale.Scale;
-import facs.scale.ScaleArgument;
+import name.mjw.facs.scale.Scale;
+import name.mjw.facs.scale.ScaleArgument;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Comparator;

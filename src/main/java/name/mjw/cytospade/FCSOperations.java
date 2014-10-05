@@ -1,4 +1,4 @@
-package cytospade;
+package name.mjw.cytospade;
 
 /*
  * To change this template, choose Tools | Templates

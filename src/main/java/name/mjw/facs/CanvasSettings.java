@@ -26,7 +26,7 @@
 *
 * http://www.cytobank.org
 */
-package facs;
+package name.mjw.facs;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -36,7 +36,7 @@ import java.text.DecimalFormat;
 import java.util.*;
 
 // Import the scale package
-import facs.scale.*;
+import name.mjw.facs.scale.*;
 
 /**
 * <p>

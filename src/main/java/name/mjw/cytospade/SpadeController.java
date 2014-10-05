@@ -1,4 +1,4 @@
-package cytospade;
+package name.mjw.cytospade;
 import cytoscape.Cytoscape;
 import cytoscape.logger.CyLogger;
 import java.io.BufferedReader;

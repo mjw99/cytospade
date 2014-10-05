@@ -1,4 +1,4 @@
-package cytospade;
+package name.mjw.cytospade;
 import cytoscape.CyNode;
 import cytoscape.Cytoscape;
 import cytoscape.data.CyAttributes;
@@ -7,8 +7,8 @@ import cytoscape.visual.VisualPropertyType;
 import cytoscape.visual.calculators.BasicCalculator;
 import cytoscape.visual.calculators.Calculator;
 import cytoscape.visual.mappings.*;
-import cytospade.SpadeContext.NormalizationKind;
-import cytospade.SpadeContext.SymmetryType;
+import name.mjw.cytospade.SpadeContext.NormalizationKind;
+import name.mjw.cytospade.SpadeContext.SymmetryType;
 import java.awt.Color;
 import java.io.BufferedReader;
 import java.io.File;

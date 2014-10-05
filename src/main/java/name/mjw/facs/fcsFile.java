@@ -1,4 +1,4 @@
-package facs;
+package name.mjw.facs;
 
 /**
  * fcsFile.java
