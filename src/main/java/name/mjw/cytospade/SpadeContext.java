@@ -542,7 +542,7 @@ public class SpadeContext {
             default:
                 out.write("DOWNSAMPLING_TARGET_NUMBER=NULL\n");
                 out.write("DOWNSAMPLING_TARGET_PCTILE=NULL\n");
-                out.write(String.format("DOWNSAMPLING_TARGET_PERCENT=%d\n",this.getTargetDownsamplePercent()/100.0));
+                out.write(String.format("DOWNSAMPLING_TARGET_PERCENT=" + nf.format(this.getTargetDownsamplePercent()/100.0)) + "\n");
                 break;
         }
         out.write(String.format("TARGET_CLUSTERS=%d\n",this.getTargetClusters()));
