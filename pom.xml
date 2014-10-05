@@ -1,0 +1,117 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>name.mjw</groupId>
+	<artifactId>cytospade</artifactId>
+	<version>1.2</version>
+	<name>cytospade</name>
+	<packaging>jar</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+
+			</plugin>
+
+			<plugin>
+				<!-- Needed for maths lib -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+				<version>2.3</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<artifactSet>
+						<includes>
+							<include>org.apache.commons:commons-math</include>
+						</includes>
+					</artifactSet>
+
+
+				</configuration>
+			</plugin>
+
+		</plugins>
+
+
+		<!-- Brings across plugin.probs into the jar since this is needed to recognise 
+                     the jar as a cytoscape plugin -->
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.props</include>
+				</includes>
+			</resource>
+		</resources>
+
+	</build>
+
+
+
+	<repositories>
+		<repository>
+			<id>cytoscape_releases</id>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<name>Cytoscape Releases</name>
+			<url>http://code.cytoscape.org/nexus/content/repositories/releases/</url>
+		</repository>
+		<repository>
+			<id>cytoscape_thirdparty</id>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<name>Cytoscape Third Party</name>
+			<url>http://code.cytoscape.org/nexus/content/repositories/thirdparty/</url>
+		</repository>
+		<repository>
+			<id>cytoscape_biopax_release</id>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<name>Cytoscape BioPAX Release Mirror</name>
+			<url>http://code.cytoscape.org/nexus/content/repositories/biopax-release/</url>
+		</repository>
+	</repositories>
+
+	<dependencies>
+		<dependency>
+			<groupId>cytoscape</groupId>
+			<artifactId>cytoscape</artifactId>
+			<version>2.8.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-math</artifactId>
+			<version>2.2</version>
+		</dependency>
+	</dependencies>
+</project>
