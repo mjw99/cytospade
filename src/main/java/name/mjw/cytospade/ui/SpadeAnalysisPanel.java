@@ -366,8 +366,8 @@ public class SpadeAnalysisPanel extends javax.swing.JPanel {
                 }
 
                 NodeView nodeView = currentNetworkView.getNodeView(node);
-                nodeView.setXPosition(pos[id][0]);
-                nodeView.setYPosition(pos[id][1]);
+                nodeView.setXPosition(pos[id - 1][0]);
+                nodeView.setYPosition(pos[id - 1][1]);
             }
 
 
