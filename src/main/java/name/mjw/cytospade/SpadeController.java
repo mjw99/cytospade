@@ -123,38 +123,9 @@ public class SpadeController extends SwingWorker<Integer, Void> {
         doneButton.setEnabled(true);
     }
 
-    private String getExecutable() {
-        String os = System.getProperty("os.name").toLowerCase();
-        if (os.indexOf("win") >= 0) {
-            // Need to go into the registry to recover the executable
-            try {
-                String REGSTR_TOKEN = "REG_SZ";
-
-                Process p = Runtime.getRuntime().exec("REG QUERY \"HKLM\\SOFTWARE\\R-core\\R\" /v InstallPath");
-                BufferedReader reader = new BufferedReader(new java.io.InputStreamReader(p.getInputStream()));
-
-                p.waitFor();
-
-                StringBuilder sb = new StringBuilder();
-                String line;
-                while ((line = reader.readLine()) != null) {
-                    sb.append(line);
-                }
-                reader.close();
-
-                String result = sb.toString();
-                int token = result.indexOf(REGSTR_TOKEN);
-                if (token == -1)
-                    return null;
-                else
-                    return '"'+result.substring(token +  REGSTR_TOKEN.length()).trim()+"\\bin\\R\"";
-            } catch (Exception ex) {
-                CyLogger.getLogger(SpadeController.class.getName()).error(null, ex);
-                return null;
-            }
-        } else
-            return "R";
-    }
+	private String getExecutable() {
+		return "R";
+	}
 
 
     
