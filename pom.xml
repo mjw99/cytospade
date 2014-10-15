@@ -48,11 +48,25 @@
 				</configuration>
 			</plugin>
 
+
+			<!-- see http://wiki.cytoscape.org/Cytoscape_Plugin_Tutorial -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifestEntries>
+							<Cytoscape-Plugin>name.mjw.cytospade.CytoSpade</Cytoscape-Plugin>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+
 		</plugins>
 
 
 		<!-- Brings across plugin.probs into the jar since this is needed to recognise 
-                     the jar as a cytoscape plugin -->
+			the jar as a cytoscape plugin -->
 		<resources>
 			<resource>
 				<directory>src/main/java</directory>
