@@ -1,5 +1,5 @@
 # CytoSPADE Cytoscape Plugin for SPADE
-This is an experimential mavenised fork with a few extra bug fixes; please see the parent project for the full details
+This is an experimential mavenised fork with a few extra bug fixes; please see the parent project for the full details.
 
 ## Setup and Build Process under a Debian like OS
 
@@ -12,5 +12,7 @@ git clone https://github.com/mjw99/cytospade.git
 cd cytospade
 mvn package
 
-# Copy the resulting jar in ./target to your cyctoscape plugins directory
+# From the "Plugins"-->"Install Plugin from File" menu, select the jar that
+# has been build and placed in ./target
+
 
